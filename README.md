@@ -30,7 +30,7 @@ Let's see how we can send the same request using cursor-based pagination.
 
 ## Step #1: Sending a request
 
- When using cursor-based pagination, we can also utilize the optional `count` field, which functions the same way as before. However, instead of using the `offset` field, we will replace it with the `cursor` field, which represents where in the data set the next items should be fetched from.  When setting the `cursor` field to the value of `None` in a request, the response will default and return the first 250 transactions. For now, let's set this to `None` in our request:
+ When using cursor-based pagination, we can also utilize the optional `count` field, which functions the same way as before. However, instead of using the `offset` field, we will replace it with the `cursor` field, which represents where in the data set the next items should be fetched from.  When setting the `cursor` field to the value of `None` in a request, the response will default and return the first 250 transactions. For now, let's try this in our request:
 
 ```python
     response = client.Transactions.get(access_token, 
