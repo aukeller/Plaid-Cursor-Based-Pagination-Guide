@@ -1,6 +1,6 @@
 # Cursor-Based Pagination Guide
 
-This step-by-step guide will demonstrate how to implement cursor-based pagination for the `/transactions/get` endpoint by sending a Retrieve Transactions request. We will be using the [Python Client Library](https://github.com/plaid/plaid-python), so the following code will be in Python.
+This step-by-step guide will demonstrate how to implement cursor-based pagination for the `/transactions/get` endpoint. We will be using the [Python Client Library](https://github.com/plaid/plaid-python) to send a Retrieve Transactions request, so the following code will be in Python.
 
 ## Background
 
@@ -52,7 +52,7 @@ Let's see how we can send the same request using cursor-based pagination.
 
 Our response above returns an array of 250 transactions, which we previously specified with the `count` field in our request. More importantly though, our response returns a `next_cursor` attribute which points to the next item in our data set. 
 
-## Step #3: Using `next_cursor`
+## Step #3: Using the next_cursor
 
 Let's set the value of the `cursor` field in our subsequent request to the value of `next_cursor` from our previous response to return the next set of transactions:
 
